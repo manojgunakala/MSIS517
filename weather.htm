@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>weather report</title>
+<link rel="stylesheet" href="weather.css" type="text/css" />
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+    function displayWeather() {
+        var city = document.getElementById("city").value;
+        var state = document.getElementById("state").value;
+        
+        var xmlhttp = new XMLHttpRequest();
+        var url = "https://query.yahooapis.com/v1/public/yql?q=select * from weather.forecast where woeid in (select woeid from geo.places(1) where text=" + "'" + city + "," + state + "'" + ")&format=json&env=store://datatables.org/alltableswithkeys";
+        xmlhttp.open("get", url, true);
+        xmlhttp.send();
+        xmlhttp.onreadystatechange = function () {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                var w = JSON.parse(xmlhttp.responseText);
+                document.getElementById("result").innerHTML = "Current Temperature is " + w.query.results.channel.item.condition.temp + " " +
+                    "<br/>" + "Looks: " + w.query.results.channel.item.condition.text + "" + "<br/>" + "Sunrise:" + w.query.results.channel.astronomy.sunrise + "" +
+                    "<br/>" + "Sunset: " + w.query.results.channel.astronomy.sunset;
+            }
+        };
+    }
+    </script>
+
+</head>
+<body>
+<br>
+<h1
+			style="color: red; font-size: 80px; align: center; font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, sans-serif; position: absolute; top =200px; left: 300px;">live Weather
+			Report</h1><br>
+	<div class="loginbox radius"
+	style="position: absolute; left: 500px; top: 250px;">
+	<div class="loginboxinner radius">
+
+	<div class="loginform">
+					
+<h2 align="center" style ="color:yellow;">Name of the City :</h2><input type="text" id="city" size="40"><br><br>
+
+<h2 align="center" style ="color:yellow;"> State code:</h2><input type="text" id="state" size="40"><br><br>
+
+<div class="wrapper">
+    <button id="send" size ="20" type="submit" value="Submit" onclick="displayWeather()" 
+		style="font-size: 15pt;  color: white; background-color: #22324f;">Go!</button>
+</div>
+<p id="result"></p>
+
+<body class="login" style="background-image: url(weatherbg.jpg)"  >
+	
+<!-- header starts here -->
+</div>
+</div>
+</div>
+</body>
+</html>
