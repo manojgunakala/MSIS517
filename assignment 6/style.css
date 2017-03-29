@@ -1,0 +1,41 @@
+body {
+	background-color: white;
+	clear: left;
+}
+
+h1 {
+	color: purple;
+}
+
+
+
+div.container {
+	width: 100px;
+	border: 1px solid gray;
+}
+
+.image:hover img {
+	-webkit-transform: scale(1.15); /* Safari and Chrome */
+	-moz-transform: scale(1.15); /* Firefox */
+	-ms-transform: scale(1.15); /* IE 9 */
+	-o-transform: scale(1.15); /* Opera */
+	transform: scale(1.15);
+	border: 0;
+}
+
+
+.header {
+	padding: 1em;
+	color: white;
+	background-color: #5499C7;
+	clear: left;
+	text-align: center;
+}
+
+
+
+
+.skil {
+	font-size: 120%;
+	color: blue;
+}
