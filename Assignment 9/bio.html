@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Bio</title>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="bootstrap.min.css">
+<script type="text/javascript" src="code.js"></script>
+<script type="text/javascript" src="jquery.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<style>
+
+.image{
+ width:220px;
+    margin: 5px;
+    height:100%;
+}
+.btn-primary {
+	color: #fff;
+	background-color: transparent;
+	border-color: white;
+	margin-bottom: 5px;
+}
+.btn-primary:hover {
+	color: #27A967;
+	background-color: white;
+	border-color: white;
+}
+.navbar-inverse .navbar-nav li a:hover {
+	background: #2f59bb;
+	}
+
+</style>
+<script>
+function home(){
+	window.location.href = "home.html";
+}
+function bio(){
+	window.location.href = "bio.html";
+	
+}
+function resume(){
+	window.location.href = "resume.html";
+	
+}
+function contact(){
+	window.location.href = "contact.html";
+	
+}
+
+</script>
+</head>
+<body style= "background-image: url(webpagebg.jpg)">
+<nav class="navbar navbar-inverse navbar-static-top">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">GSM</a><br><br>
+		</div>
+		
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#" onclick = "home()">Home</a></li>
+				<li><a href="#" onclick = "bio()">Bio</a></li>
+				<li><a href="#" onclick = "resume()">Resume</a></li>
+				<li><a href="#" onclick = "contact()">Contact</a></li>
+			</ul>
+		</div>
+		
+	</div>
+</nav>
+ 
+  <div id="tab2"><!-- page 2 -->
+<br><br>
+<div class="image" style="float: left;">
+		<nav>
+			<img src="manoj.jpg"
+				alt="Profile image" width ="200" height = "200">
+		</nav>
+	</div>
+<br><br><h1 style="font-family:Georgia; font-size:250%; text-align:left;">Sai Manoj Gunakala</h1><br>
+<h3 style="font-family:Lucida Calligraphy; font-size:150%; text-align:left;">'It's hard to beat a person who never gives up.'</h3><br><br><br><br>
+<div id ="bio">
+	<p style = "font-family:Constantia; font-size:130%"> Working hard gives rise to success, the ultimate input for success is stay focused on the goal. </p>
+	<p style = "font-family:Constantia; font-size:130%"> Team work plays a key role in achiveing success, teamwork will provide sharing ideas. </p> 
+	<p style = "font-family:Constantia; font-size:130%"> I did about 5 projects in team which helped me in team develoment skills and improving technical skills. This will help you in developing a project with shared views. </p>
+	</div>
+  </div><!-- /tab2 -->
+<br><br><br><br>
+<div class="footer">
+
+ <h4 align="center"><b>© Copyright 2017, saimanojgunakala.com</b></h4>
+
+        <div class="text-center center-block">
+            <a href="https://www.linkedin.com/in/manoj-gunakala-b87b7aa3/" target="_blank"><i id="social-em" class="fa fa-linkedin-square fa-3x social"></i></a>&nbsp;
+            <a href="https://github.com/manojgunakala" target="_blank"><i class="fa fa-github-square fa-3x social"></i></a>
+            <a href="https://www.facebook.com/manoj.gunakala" target="_blank"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+	    <a href="https://twitter.com/saimanoj17" target="_blank"><i id="social-twitter" class="fa fa-twitter-square fa-3x social"></i></a>            
+</div>
+</body>
+</html>

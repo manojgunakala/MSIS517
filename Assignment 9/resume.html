@@ -1,0 +1,225 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Resume</title>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="bootstrap.min.css">
+<script type="text/javascript" src="code.js"></script>
+<script type="text/javascript" src="jquery.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<style>
+div{margin-left:80px;}
+.btn-primary {
+	color: #fff;
+	background-color: transparent;
+	border-color: white;
+	margin-bottom: 5px;
+}
+.btn-primary:hover {
+	color: #27A967;
+	background-color: white;
+	border-color: white;
+}
+.navbar-inverse .navbar-nav li a:hover {
+	background: #2f59bb;
+	}
+
+</style>
+<script>
+
+function home(){
+	window.location.href = "home.html";
+}
+function bio(){
+	window.location.href = "bio.html";
+	
+}
+function resume(){
+	window.location.href = "resume.html";
+	
+}
+function contact(){
+	window.location.href = "contact.html";
+	
+}
+</script>
+<script>
+$(document)
+.ready(
+		function() {
+			$("div").click(function() {
+				$("#anim").animate({
+					right : '250px'
+				});
+			});
+
+
+			$("#tech").hover(function() {
+				$("#tech").toggleClass("skil");
+			});
+
+			$("#education").hover(function() {
+				$("li").each(function() {
+					$(this).toggleClass("skil");
+				});
+			});
+
+		});
+
+</script>
+</head>
+<body style= "background-image: url(webpagebg.jpg)">
+<nav class="navbar navbar-inverse navbar-static-top">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">GSM</a><br><br>
+		</div>
+		
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#" onclick = "home()">Home</a></li>
+				<li><a href="#" onclick = "bio()">Bio</a></li>
+				<li><a href="#" onclick = "resume()">Resume</a></li>
+				<li><a href="#" onclick = "contact()">Contact</a></li>
+			</ul>
+		</div>
+		
+	</div>
+</nav>
+<div id="tab3" align = "left"><!-- page 3 -->
+<br>
+			<h2 style="color:blue;">Education:</h2>
+
+			<p>Marist College, School of Computer Science and Mathematics, Poughkeepsie, NY</p>
+
+			<p>Master of Science, Information Systems , May 2018</p>
+
+			<p>GPA: 3.8</p>
+
+			<p>BMS College of Engineering, Bangalore, Karnataka, India.</p>
+
+			<p>Bachelor of Engineering, Electronics and Communications Engineering , June 2016</p>
+
+			<p>GPA: 8.13</p>
+
+
+
+		
+	<header>
+  		<h1 style=" color: blue;">Skills and Projects</h1>
+	</header>
+
+
+			<h2 style="color:blue;">
+				Skills:
+			</h2>
+
+		<h3>Applications:</h3>
+
+	<ul>
+		<li>MS Office</li>
+		<li> Oracle SQL data modeler</li>
+		<li> Oracle SQL developer</li>
+		<li> Microsoft Visio</li>
+		<li> Microsoft Visual Studio</li> 
+		<li>Code::Blocks</li>
+	</ul>
+
+
+		<h3>Languages:</h3>
+
+	<ul>
+		<li>C</li> 
+		<li>C++</li>
+		<li>SQL</li>
+		<li>MATLAB</li>
+		<li>HTML</li>
+		<li>CSS</li>
+		<li>Java script</li>
+	</ul>
+
+		<h3>Operating Systems:</h3>
+
+	<ul>
+		<li>Windows 7</li>
+		<li> Windows 8</li>
+		<li> VISTA</li>
+		<li> Windows 10</li>
+	</ul>
+
+		<h2 style="color:blue;"> Projects And Trainings:</h2>
+
+	<h3>Trainings:</h3>
+
+
+	<h4>Gaitview Technophiles Private Limited, Vijayawada.</h4>
+                                     
+		<p>Trained on Database Designing using SQL commands. Studied about how to manipulate data using SQL commands.</p>
+
+	<h3>Projects undertaken:</h3>
+
+	
+
+	<h4>Electronic Voting Machine</h4>                                                     
+
+                                     
+		<p>A mini project in second year on<b> MICROCONTROLLER 8051</b>. With this project we demonstrated how exactly a electronic voting machine works.</p>
+
+
+
+	<h4>Bus Reservation System</h4>
+                                                         
+		<p>A mini project in second year using OOPS with C++. In this project we tried to implement different concepts of object oriented programming with C++. This project gives a demonstration on how tickets are booked in reservation centers.</p>
+
+
+
+	<h4>Zero Crossing Detector</h4> 
+
+		<p>A mini project in third year using cadence tool. Implemented the circuit on the cadence software. The applications of the project are frequency counters and can also be used as switching circuits.</p>
+
+
+
+	<h4>Implementing a Remote controlling system on a wearable device</h4>
+
+		<p>This project was implemented on <b>Arduino uno board</b>. We used different technologies that we were taught in our academic session like wireless systems and embedded system. The main idea of the project is to help physically challenged people who cannot move towards the switch board whenever they want to switch ON/OFF any electrical device in a room.</p>
+
+
+	<h4>Advanced Vehicle Security System with Accident Notification and Obstacle Detection</h4>
+
+		<p>This the final project that was implemented on the <b>ARM Cortex M4 Board</b>. This project was categorized under product development category. The main objective of this project is develop a system that notifies about the accident of the vehicle, detect the obstacles ahead of the vehicle. We used GPS module to track the accident location, GSM module to intimate the police, ambulance and relatives. We used Ultra sonic sensor to detect the obstacle ahead of the vehicle, Vibration sensor is used to detect the intensity of the accident.</p>
+
+
+	<h2 style="color:blue;">Activities:</h2>
+
+	<ul>
+		<li>	Volunteered for<b>UTSAV</b>, college techno-cultural fest of BMSCE in the year 2014.</li>
+		<li>	Volunteered for <b>Rotary Pulse Polio</b> in the year 2012.</li>
+	</ul>
+
+		
+		<footer>
+	
+		<h4 style="color:black;font-family:Constantia;"><b><i>Link to download a PDF of resume:</i></b></h4>
+		&nbsp;&nbsp;&nbsp;<a href="https://drive.google.com/open?id=0Bz0tW67ZDv7TMDlsajloTmlRbmc" class="btn btn-primary btn-lg active" role="button" target="_blank" onclick="pdfresume()">Download</a>
+	
+	</footer>
+  </div><!-- /tab3 -->
+<div class="footer">
+
+ <h4 align="center"><b>© Copyright 2017, saimanojgunakala.com</b></h4>
+
+        <div class="text-center center-block">
+            <a href="https://www.linkedin.com/in/manoj-gunakala-b87b7aa3/" target="_blank"><i id="social-em" class="fa fa-linkedin-square fa-3x social"></i></a>&nbsp;
+            <a href="https://github.com/manojgunakala" target="_blank"><i class="fa fa-github-square fa-3x social"></i></a>
+            <a href="https://www.facebook.com/manoj.gunakala" target="_blank"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+	    <a href="https://twitter.com/saimanoj17" target="_blank"><i id="social-twitter" class="fa fa-twitter-square fa-3x social"></i></a>        
+</div>
+</body>
+</html>

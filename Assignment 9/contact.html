@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Contact</title>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="bootstrap.min.css">
+<script type="text/javascript" src="code.js"></script>
+<script type="text/javascript" src="jquery.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+
+<script>
+function home(){
+	window.location.href = "home.html";
+}
+function bio(){
+	window.location.href = "bio.html";
+	
+}
+function resume(){
+	window.location.href = "resume.html";
+	
+}
+function contact(){
+	window.location.href = "contact.html";
+	
+}
+</script>
+
+<script>
+
+$(document).ready(function() {
+    $.getJSON("reason.json", function(obj) {
+        $.each(obj.Reason, function(key, value) {
+            $("#contactreason").append($("<option></option>")
+                    .attr("value", value).text(value.Reason));
+        });
+    });
+});
+
+
+
+
+
+</script>
+<style>
+.centered
+{
+    text-align:center;
+}
+button {
+	width: 380px;
+	height: 45px;
+}
+
+.btn-primary {
+	color: #fff;
+	background-color: transparent;
+	border-color: white;
+	margin-bottom: 5px;
+}
+.btn-primary:hover {
+	color: #27A967;
+	background-color: white;
+	border-color: white;
+}
+.navbar-inverse .navbar-nav li a:hover {
+	background: #2f59bb;
+}
+
+</style>
+<style>
+button {
+     
+	width: 300px;
+	height: 45px;
+}
+</style>
+</head>
+<body >
+<body style="background-image: url(webpagebg.jpg)">
+<nav class="navbar navbar-inverse navbar-static-top">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">GSM</a><br><br>
+		</div>
+		
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#" onclick = "home()">Home</a></li>
+				<li><a href="#" onclick = "bio()">Bio</a></li>
+				<li><a href="#" onclick = "resume()">Resume</a></li>
+				<li><a href="#" onclick = "contact()">Contact</a></li>
+			</ul>
+		</div>
+		
+	</div>
+</nav>
+	<div id="tab4" align="center">
+		
+
+		<form method="POST" action="http://formspree.io/saimanoj.gunakala@gmail.com">
+			<h1 style="font-color: #05061c;">Contact </h1>
+				<h3>Any questions contact me through this form.</h3>
+	<fieldset id="contactreasonfld">
+
+        <h2>ContactReason</h2>
+
+        <select name="drop_down" id="contactreason">
+
+            <option name="contact-reason" value="None" selected="Selected">Select type</option>
+
+        </select>
+
+    </fieldset>
+<br><br>
+  
+  <input type="text" id="name" name="sender name" size="48" placeholder="Name" value="" align="center" width="100" height="120" pattern ="^[a-zA-Z][0-9a-zA-Z .,'-]*$" required />
+<br><br>
+  <input type="email" name="email" size="48" placeholder="Your email" width="100" height="100" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required/>
+<br><br>
+
+  <input type="text" name="subject" size="48" placeholder="Enter Subject" value="" class="radius" align="center" width="100" height="100" required />
+<br><br>
+  <textarea rows="10" cols="50" name="message" placeholder="Your message......" width="100" height="100"></textarea>
+<br><br>  
+<button type="button" class="btn btn-primary btn-lg active">Submit</button>
+</form>
+</div>
+
+	</form>
+<div class="footer">
+
+ <h4 align="center"><b>© Copyright 2017, saimanojgunakala.com</b></h4>
+
+        <div class="text-center center-block">
+            <a href="https://www.linkedin.com/in/manoj-gunakala-b87b7aa3/" target="_blank"><i id="social-em" class="fa fa-linkedin-square fa-3x social"></i></a>&nbsp;
+            <a href="https://github.com/manojgunakala" target="_blank"><i class="fa fa-github-square fa-3x social"></i></a>
+            <a href="https://www.facebook.com/manoj.gunakala" target="_blank"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+	     <a href="https://twitter.com/saimanoj17" target="_blank"><i id="social-twitter" class="fa fa-twitter-square fa-3x social"></i></a>        
+</div>
+</body>
+</html>
